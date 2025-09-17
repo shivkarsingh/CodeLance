@@ -19,6 +19,14 @@ mongoose
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => console.error("❌ Mongo error:", err));
 
+
+const PORT = process.env.PORT || 8800;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Backend running at http://localhost:${PORT}`);
+});
+
+
 app.use(
   cors({
     origin: process.env.CLIENT_URL || "http://localhost:3000",
