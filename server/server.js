@@ -10,6 +10,11 @@ import authRoute from "./routes/auth.route.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
+
+
+
+
+
 dotenv.config();
 const app = express();
 
@@ -20,11 +25,6 @@ mongoose
   .catch((err) => console.error("❌ Mongo error:", err));
 
 
-const PORT = process.env.PORT || 8800;
-
-app.listen(PORT, () => {
-  console.log(`🚀 Backend running at http://localhost:${PORT}`);
-});
 
 
 app.use(
